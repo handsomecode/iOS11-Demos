@@ -39,15 +39,17 @@ extension ViewController: UICollectionViewDragDelegate {
         var items: [UIDragItem] = []
         if let cell = collectionView.cellForItem(at: indexPath) {
             let dragItem = UIDragItem(itemProvider: NSItemProvider())
-            
-            // Pretty sure this isn't being called.
-            dragItem.previewProvider = {
-                let previewView = UIView()
-                let dragPreview = UIDragPreview(view: previewView)
-                dragPreview.parameters.backgroundColor = cell.contentView.backgroundColor
-                return dragPreview
-            }
-            
+            dragItem.localObject = cell
+            items.append(dragItem)
+        }
+        
+        return items
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForAddingTo session: UIDragSession, at indexPath: IndexPath, point: CGPoint) -> [UIDragItem] {
+        var items: [UIDragItem] = []
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            let dragItem = UIDragItem(itemProvider: NSItemProvider())
             dragItem.localObject = cell
             items.append(dragItem)
         }
@@ -56,7 +58,29 @@ extension ViewController: UICollectionViewDragDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, dragSessionWillBegin session: UIDragSession) {
-        self.currentDragSession = session
+        print("DRAG SESSION WILL BEGIN")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dragSessionDidEnd session: UIDragSession) {
+        print("DRAG SESSION ENDED")
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        let preview = UIDragPreviewParameters()
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            let cellCenterPoint = cell.contentView.center
+            let path = UIBezierPath(
+                arcCenter: cellCenterPoint,
+                radius: 50.0,
+                startAngle: 0.0,
+                endAngle: 360.0,
+                clockwise: true
+            )
+            preview.visiblePath = path
+        }
+        preview.backgroundColor = UIColor.magenta
+        return preview
     }
 }
 
@@ -68,15 +92,13 @@ extension ViewController: UICollectionViewDropDelegate {
     func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
         for item in coordinator.items {
             if let sourceIndexPath = item.sourceIndexPath, let destinationIndexPath = coordinator.destinationIndexPath {
-                let movedColor = colors.remove(at: sourceIndexPath.item)
-                colors.insert(movedColor, at: destinationIndexPath.item)
+                moveColor(from: sourceIndexPath, to: destinationIndexPath)
                 collectionView.performBatchUpdates({
                     collectionView.deleteItems(at: [sourceIndexPath])
                     collectionView.insertItems(at: [destinationIndexPath])
                     
-                }, completion: { (success) in
-                    coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
                 })
+                coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
             }
         }
     }
@@ -85,5 +107,12 @@ extension ViewController: UICollectionViewDropDelegate {
         let proposal = UICollectionViewDropProposal(dropOperation: .move, intent: .insertAtDestinationIndexPath)
         return proposal
     }
+    
+    // MARK: Private
+    fileprivate func moveColor(from sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedColor = colors.remove(at: sourceIndexPath.item)
+        colors.insert(movedColor, at: destinationIndexPath.item)
+    }
 }
+
 
