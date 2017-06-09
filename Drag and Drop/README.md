@@ -60,7 +60,11 @@ And that's it.  Two functions and three collection/table view properties and you
 #### Standalone elements
 Coming Soon!
 
-### Documentation
+### Related Documentation
+[Introduction to Drag and Drop WWDC video](https://developer.apple.com/videos/play/wwdc2017/203/)
+
+[Mastering Drag and Drop](https://developer.apple.com/videos/play/wwdc2017/213/)
+
 [Drag and Drop](https://developer.apple.com/documentation/uikit/drag_and_drop)
 
 [NSItemProvider](https://developer.apple.com/documentation/foundation/nsitemprovider)
