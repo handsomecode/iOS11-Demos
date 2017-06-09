@@ -10,8 +10,8 @@ import UIKit
 
 class DropViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    fileprivate var colors: [UIColor] = []
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private var colors: [UIColor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,7 @@ class DropViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension DropViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
@@ -45,6 +46,7 @@ extension DropViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDropDelegate
 extension DropViewController: UICollectionViewDropDelegate {
     func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
         let canHandle = session.hasItemsConforming(toTypeIdentifiers: UIColor.readableTypeIdentifiersForItemProvider)
@@ -74,7 +76,7 @@ extension DropViewController: UICollectionViewDropDelegate {
     }
     
     // MARK: Private
-    fileprivate func addColor(_ color: UIColor, at indexPath: IndexPath) {
+    private func addColor(_ color: UIColor, at indexPath: IndexPath) {
         colors.insert(color, at: indexPath.item)
     }
 }
