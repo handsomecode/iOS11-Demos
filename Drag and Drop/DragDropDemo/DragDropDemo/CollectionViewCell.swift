@@ -8,11 +8,4 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        titleLabel.text = nil
-    }
-}
+class CollectionViewCell: UICollectionViewCell { }

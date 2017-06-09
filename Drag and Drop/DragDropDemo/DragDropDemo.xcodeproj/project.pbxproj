@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D485647A1EE731AB00FEADD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48564791EE731AB00FEADD3 /* AppDelegate.swift */; };
-		D485647C1EE731AB00FEADD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485647B1EE731AB00FEADD3 /* ViewController.swift */; };
+		D485647C1EE731AB00FEADD3 /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485647B1EE731AB00FEADD3 /* DragViewController.swift */; };
 		D485647F1EE731AB00FEADD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D485647D1EE731AB00FEADD3 /* Main.storyboard */; };
 		D48564811EE731AB00FEADD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48564801EE731AB00FEADD3 /* Assets.xcassets */; };
 		D48564841EE731AB00FEADD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48564821EE731AB00FEADD3 /* LaunchScreen.storyboard */; };
 		D485648C1EE73E0C00FEADD3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */; };
+		D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23B991EEA08EA0081DF25 /* DropViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D48564761EE731AB00FEADD3 /* DragDropDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragDropDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48564791EE731AB00FEADD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D485647B1EE731AB00FEADD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D485647B1EE731AB00FEADD3 /* DragViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
 		D485647E1EE731AB00FEADD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48564801EE731AB00FEADD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48564831EE731AB00FEADD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48564851EE731AB00FEADD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		D4D23B991EEA08EA0081DF25 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				D48564791EE731AB00FEADD3 /* AppDelegate.swift */,
-				D485647B1EE731AB00FEADD3 /* ViewController.swift */,
+				D485647B1EE731AB00FEADD3 /* DragViewController.swift */,
+				D4D23B991EEA08EA0081DF25 /* DropViewController.swift */,
 				D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */,
 				D485647D1EE731AB00FEADD3 /* Main.storyboard */,
 				D48564801EE731AB00FEADD3 /* Assets.xcassets */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D485647C1EE731AB00FEADD3 /* ViewController.swift in Sources */,
+				D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */,
+				D485647C1EE731AB00FEADD3 /* DragViewController.swift in Sources */,
 				D485647A1EE731AB00FEADD3 /* AppDelegate.swift in Sources */,
 				D485648C1EE73E0C00FEADD3 /* CollectionViewCell.swift in Sources */,
 			);
@@ -273,7 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DKL832G2AS;
 				INFOPLIST_FILE = DragDropDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = is.handsome.DragDropDemo;
@@ -287,7 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DKL832G2AS;
 				INFOPLIST_FILE = DragDropDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = is.handsome.DragDropDemo;
