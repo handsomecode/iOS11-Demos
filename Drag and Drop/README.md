@@ -30,10 +30,27 @@ This is the only required function the drag delegate must implement but you can 
 Adding Drop functionality to a collection view is just as easy as adding Drag.  Have your collection view conform to `UICollectionViewDropDelegate`, set your controller as the `dropDelegate`, and implement the required function:
 ```swift
 func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
-    // Get destination index path
-    // Batch update the collection view
-    // Update data sources
-    // Drop item in collection view
+    // Grab the initial destination indexPath for the drop item(s)
+    let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
+    var destinationIndex = destinationIndexPath.item
+
+    for item in coordinator.items {
+        guard let newColor = item.dragItem.localObject as? UIColor else { continue }
+
+        // Insert the new item into the data source and collection view
+        let insertionIndexPath = IndexPath(item: destinationIndex, section: 0)
+        collectionView.performBatchUpdates({
+            self.addColor(newColor, at: insertionIndexPath)
+            collectionView.insertItems(at: [insertionIndexPath])
+        })
+
+        // Tells the drop coordinator to drop and animate the item into the `insertionIndexPath`
+        // Must be called _after_ `performBatchUpdates`
+        coordinator.drop(item.dragItem, toItemAt: insertionIndexPath)
+
+        // If dealing with more than one item, update the destinationIndex by 1
+        destinationIndex += 1
+    }
 }
 ```
 Just as with Drag, this is the only required function the drop delegate must implement but you can fully customize the experience by implementing the optional functions.
