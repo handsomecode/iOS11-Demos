@@ -61,12 +61,12 @@ And that's it.  Two functions and three collection/table view properties and you
 Coming Soon!
 
 ### Related Documentation
-[Introduction to Drag and Drop WWDC video](https://developer.apple.com/videos/play/wwdc2017/203/)
+Introduction to Drag and Drop [WWDC video](https://developer.apple.com/videos/play/wwdc2017/203/)
 
-[Mastering Drag and Drop](https://developer.apple.com/videos/play/wwdc2017/213/)
+Mastering Drag and Drop [WWDC Video](https://developer.apple.com/videos/play/wwdc2017/213/)
 
-[Drag and Drop](https://developer.apple.com/documentation/uikit/drag_and_drop)
+[Drag and Drop Documentation](https://developer.apple.com/documentation/uikit/drag_and_drop)
 
-[NSItemProvider](https://developer.apple.com/documentation/foundation/nsitemprovider)
+[NSItemProvider Documentation](https://developer.apple.com/documentation/foundation/nsitemprovider)
 
 [Apple Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
