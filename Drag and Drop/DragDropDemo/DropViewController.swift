@@ -11,12 +11,25 @@ import UIKit
 class DropViewController: UIViewController {
     
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    fileprivate var colors: [UIColor] = [.orange, .blue, .red, .purple, .cyan, .magenta, .yellow, .brown, .black, .green]
+    fileprivate var colors: [UIColor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dragInteractionEnabled = true
         collectionView.dropDelegate = self
+        
+        colors = generateColorHues(of: UIColor.green, numberOfColors: 12)
+    }
+    
+    // MARK: - Private
+    private func generateColorHues(of color: UIColor, numberOfColors: Int) -> [UIColor] {
+        var newColors: [UIColor] = []
+        for _ in 0..<numberOfColors {
+            let newColor = UIColor.randomHueFor(color)
+            newColors.append(newColor)
+        }
+        
+        return newColors
     }
 }
 

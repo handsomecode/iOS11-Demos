@@ -14,6 +14,7 @@
 		D48564841EE731AB00FEADD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48564821EE731AB00FEADD3 /* LaunchScreen.storyboard */; };
 		D485648C1EE73E0C00FEADD3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */; };
 		D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23B991EEA08EA0081DF25 /* DropViewController.swift */; };
+		D4D23B9C1EEAC8440081DF25 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23B9B1EEAC8440081DF25 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D48564851EE731AB00FEADD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D4D23B991EEA08EA0081DF25 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
+		D4D23B9B1EEAC8440081DF25 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D48564801EE731AB00FEADD3 /* Assets.xcassets */,
 				D48564821EE731AB00FEADD3 /* LaunchScreen.storyboard */,
 				D48564851EE731AB00FEADD3 /* Info.plist */,
+				D4D23B9B1EEAC8440081DF25 /* UIColor+Random.swift */,
 			);
 			path = DragDropDemo;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D23B9C1EEAC8440081DF25 /* UIColor+Random.swift in Sources */,
 				D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */,
 				D485647C1EE731AB00FEADD3 /* DragViewController.swift in Sources */,
 				D485647A1EE731AB00FEADD3 /* AppDelegate.swift in Sources */,

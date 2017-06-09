@@ -11,12 +11,24 @@ import UIKit
 class DragViewController: UIViewController {
     
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    fileprivate var colors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .cyan, .magenta, .brown, .black]
+    fileprivate var colors: [UIColor] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dragInteractionEnabled = true
         collectionView.dragDelegate = self
+        colors = generateColorHues(of: UIColor.blue, numberOfColors: 12)
+    }
+    
+    // MARK: - Private
+    private func generateColorHues(of color: UIColor, numberOfColors: Int) -> [UIColor] {
+        var newColors: [UIColor] = []
+        for _ in 0..<numberOfColors {
+            let newColor = UIColor.randomHueFor(color)
+            newColors.append(newColor)
+        }
+        
+        return newColors
     }
 }
 
