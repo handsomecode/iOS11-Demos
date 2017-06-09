@@ -32,6 +32,7 @@ class DragViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension DragViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
@@ -44,6 +45,7 @@ extension DragViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDragDelegate
 extension DragViewController: UICollectionViewDragDelegate {
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let color = colors[indexPath.item]

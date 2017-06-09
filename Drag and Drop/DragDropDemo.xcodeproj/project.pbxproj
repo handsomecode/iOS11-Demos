@@ -13,6 +13,9 @@
 		D48564811EE731AB00FEADD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48564801EE731AB00FEADD3 /* Assets.xcassets */; };
 		D48564841EE731AB00FEADD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48564821EE731AB00FEADD3 /* LaunchScreen.storyboard */; };
 		D485648C1EE73E0C00FEADD3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */; };
+		D4C06B6C1EEB0DC500319A5C /* ImageDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06B6B1EEB0DC500319A5C /* ImageDropViewController.swift */; };
+		D4C06B6E1EEB0E2100319A5C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06B6D1EEB0E2100319A5C /* ImageCollectionViewCell.swift */; };
+		D4C06B701EEB1A8A00319A5C /* ImagePlaceholderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C06B6F1EEB1A8A00319A5C /* ImagePlaceholderCollectionViewCell.swift */; };
 		D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23B991EEA08EA0081DF25 /* DropViewController.swift */; };
 		D4D23B9C1EEAC8440081DF25 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23B9B1EEAC8440081DF25 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,9 @@
 		D48564831EE731AB00FEADD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48564851EE731AB00FEADD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		D4C06B6B1EEB0DC500319A5C /* ImageDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDropViewController.swift; sourceTree = "<group>"; };
+		D4C06B6D1EEB0E2100319A5C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D4C06B6F1EEB1A8A00319A5C /* ImagePlaceholderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4D23B991EEA08EA0081DF25 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		D4D23B9B1EEAC8440081DF25 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +69,10 @@
 				D48564791EE731AB00FEADD3 /* AppDelegate.swift */,
 				D485647B1EE731AB00FEADD3 /* DragViewController.swift */,
 				D4D23B991EEA08EA0081DF25 /* DropViewController.swift */,
+				D4C06B6B1EEB0DC500319A5C /* ImageDropViewController.swift */,
 				D485648B1EE73E0C00FEADD3 /* CollectionViewCell.swift */,
+				D4C06B6D1EEB0E2100319A5C /* ImageCollectionViewCell.swift */,
+				D4C06B6F1EEB1A8A00319A5C /* ImagePlaceholderCollectionViewCell.swift */,
 				D485647D1EE731AB00FEADD3 /* Main.storyboard */,
 				D48564801EE731AB00FEADD3 /* Assets.xcassets */,
 				D48564821EE731AB00FEADD3 /* LaunchScreen.storyboard */,
@@ -144,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C06B701EEB1A8A00319A5C /* ImagePlaceholderCollectionViewCell.swift in Sources */,
 				D4D23B9C1EEAC8440081DF25 /* UIColor+Random.swift in Sources */,
 				D4D23B9A1EEA08EA0081DF25 /* DropViewController.swift in Sources */,
 				D485647C1EE731AB00FEADD3 /* DragViewController.swift in Sources */,
+				D4C06B6E1EEB0E2100319A5C /* ImageCollectionViewCell.swift in Sources */,
+				D4C06B6C1EEB0DC500319A5C /* ImageDropViewController.swift in Sources */,
 				D485647A1EE731AB00FEADD3 /* AppDelegate.swift in Sources */,
 				D485648C1EE73E0C00FEADD3 /* CollectionViewCell.swift in Sources */,
 			);
