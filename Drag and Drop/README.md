@@ -11,7 +11,7 @@ Being able to support this in applications is more than likely going to become a
 
 ### Usage
 #### Collection (and Table) Views
-Everything discussed below about collection views also applies to table view using the `UITableViewDragDelegate`
+Everything discussed below about collection views also applies to table view using the `UITableViewDragDelegate` and `UITableViewDropDelegate`
 ###### Drag
 Incorporating the Drag functionality into a collection view is remarkably easy.  Simply conform to `UICollectionViewDragDelegate`, set your controller as the `dragDelegate` of the collection view, enable `dragInteractionEnabled` on the collection view, and implement the required function:
 ```swift
