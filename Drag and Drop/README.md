@@ -60,7 +60,9 @@ Just as with Drag, this is the only required function the drop delegate must imp
 And that's it.  Two functions and three collection/table view properties and you can support Drag and Drop in your application's table or collection view!
 
 ###### Loading Data
-Drag and Drop allows you to share certain data with other applications such as text or images.  This data is loaded asynchronously using an `NSItemProvider` and a `UICollectionViewDropPlaceholderContext`.  Instead of dropping the `dragItem`, use the `coordinator` to add a placeholder cell to the collection view:
+Drag and Drop allows you to share certain data with other applications such as text or images.  This data is loaded asynchronously using an `NSItemProvider` and a `UICollectionViewDropPlaceholderContext`.  
+
+Instead of using the coordinator to drop the `dragItem` directly, have the coordinator add a placeholder cell to the collection view:
 ```swift
 placeholderContext = coordinator.drop(item.dragItem,
                                       toPlaceholderInsertedAt: destinationIndexPath,
