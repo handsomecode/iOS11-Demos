@@ -61,7 +61,10 @@ extension ImageDropViewController: UICollectionViewDropDelegate {
                 }
             })
             
-            placeholderContext = coordinator.drop(item.dragItem, toPlaceholderInsertedAt: destinationIndexPath, withReuseIdentifier: "placeholderCell", cellUpdateHandler: { (cell) in
+            placeholderContext = coordinator.drop(item.dragItem,
+                                                  toPlaceholderInsertedAt: destinationIndexPath,
+                                                  withReuseIdentifier: "placeholderCell",
+                                                  cellUpdateHandler: { (cell) in
                 guard let placeholderCell = cell as? ImagePlaceholderCollectionViewCell else { return }
                 placeholderCell.configure(with: progress)
             })
