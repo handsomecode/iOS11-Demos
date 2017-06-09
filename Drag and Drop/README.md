@@ -2,8 +2,7 @@
 
 An example of how to use the Drag and Drop API to copy information from one collection view to another.
 
-
-<img src="multi_drag_drop.gif">
+![sample](multi_drag_drop.gif)
 
 Drag and Drop is an extremely powerful feature for iOS.  Being able to seamlessly drop data into one app from another and have it "just work" is one of the best user experience updates made to the platform in a long while.
 
