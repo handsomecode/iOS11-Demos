@@ -19,6 +19,33 @@ extension UIImage {
         return resizedImage
     }
 
+    func cropToSquare() -> UIImage? {
+        guard let cgImage = self.cgImage else {
+            return nil
+        }
+        var imageHeight = self.size.height
+        var imageWidth = self.size.width
+
+        if imageHeight > imageWidth {
+            imageHeight = imageWidth
+        }
+        else {
+            imageWidth = imageHeight
+        }
+
+        let size = CGSize(width: imageWidth, height: imageHeight)
+
+        let x = ((CGFloat(cgImage.width) - size.width) / 2).rounded()
+        let y = ((CGFloat(cgImage.height) - size.height) / 2).rounded()
+
+        let cropRect = CGRect(x: x, y: y, width: size.height, height: size.width)
+        if let croppedCgImage = cgImage.cropping(to: cropRect) {
+            return UIImage(cgImage: croppedCgImage, scale: 0, orientation: self.imageOrientation)
+        }
+
+        return nil
+    }
+
     func pixelBuffer() -> CVPixelBuffer? {
         let width = self.size.width
         let height = self.size.height

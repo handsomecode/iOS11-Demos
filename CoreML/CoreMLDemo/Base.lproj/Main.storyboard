@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dyg-PP-ZVz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dyg-PP-ZVz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,10 +13,6 @@
         <scene sceneID="Ity-nf-lrI">
             <objects>
                 <viewController id="3yr-RV-W9D" customClass="ViewController" customModule="CoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cAS-uS-dUB"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pyw-Kj-f1j"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nMO-Uu-MRf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,14 +34,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="FbM-K9-IAO" secondAttribute="trailing" id="206-DZ-4uS"/>
-                            <constraint firstItem="Pyw-Kj-f1j" firstAttribute="top" secondItem="FbM-K9-IAO" secondAttribute="bottom" id="Bhb-Ni-3Pj"/>
-                            <constraint firstItem="fmq-wb-Elg" firstAttribute="leading" secondItem="nMO-Uu-MRf" secondAttribute="leading" id="OhF-aI-OlC"/>
-                            <constraint firstItem="FbM-K9-IAO" firstAttribute="leading" secondItem="nMO-Uu-MRf" secondAttribute="leading" id="S8F-GW-rcA"/>
-                            <constraint firstAttribute="trailing" secondItem="fmq-wb-Elg" secondAttribute="trailing" id="aik-Cq-bg2"/>
-                            <constraint firstItem="fmq-wb-Elg" firstAttribute="top" secondItem="nMO-Uu-MRf" secondAttribute="top" id="ez9-VZ-EaE"/>
+                            <constraint firstItem="SON-fj-BQp" firstAttribute="trailing" secondItem="FbM-K9-IAO" secondAttribute="trailing" id="206-DZ-4uS"/>
+                            <constraint firstItem="SON-fj-BQp" firstAttribute="bottom" secondItem="FbM-K9-IAO" secondAttribute="bottom" id="Bhb-Ni-3Pj"/>
+                            <constraint firstItem="fmq-wb-Elg" firstAttribute="leading" secondItem="SON-fj-BQp" secondAttribute="leading" id="OhF-aI-OlC"/>
+                            <constraint firstItem="FbM-K9-IAO" firstAttribute="leading" secondItem="SON-fj-BQp" secondAttribute="leading" id="S8F-GW-rcA"/>
+                            <constraint firstItem="SON-fj-BQp" firstAttribute="trailing" secondItem="fmq-wb-Elg" secondAttribute="trailing" id="aik-Cq-bg2"/>
+                            <constraint firstItem="fmq-wb-Elg" firstAttribute="top" secondItem="SON-fj-BQp" secondAttribute="top" constant="-64" id="ez9-VZ-EaE"/>
                             <constraint firstItem="FbM-K9-IAO" firstAttribute="top" secondItem="fmq-wb-Elg" secondAttribute="bottom" id="mFY-ov-h3t"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="SON-fj-BQp"/>
                     </view>
                     <navigationItem key="navigationItem" id="iaJ-wY-OMo"/>
                     <connections>
