@@ -71,7 +71,7 @@ extension DropViewController: UICollectionViewDropDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
-        let proposal = UICollectionViewDropProposal(dropOperation: .copy, intent: .insertAtDestinationIndexPath)
+        let proposal = UICollectionViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
         return proposal
     }
     

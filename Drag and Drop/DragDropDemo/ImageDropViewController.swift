@@ -60,21 +60,16 @@ extension ImageDropViewController: UICollectionViewDropDelegate {
                     }
                 }
             })
-            
-            placeholderContext = coordinator.drop(item.dragItem,
-                                                  toPlaceholderInsertedAt: destinationIndexPath,
-                                                  withReuseIdentifier: "placeholderCell",
-                                                  cellUpdateHandler: { (cell) in
-                guard let placeholderCell = cell as? ImagePlaceholderCollectionViewCell else { return }
-                placeholderCell.configure(with: progress)
-            })
+
+            let placeholder = UICollectionViewDropPlaceholder(insertionIndexPath: destinationIndexPath, reuseIdentifier: "placeholderCell")
+            placeholderContext = coordinator.drop(item.dragItem, to: placeholder)
         }
         
         coordinator.session.progressIndicatorStyle = .none
     }
     
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
-        let proposal = UICollectionViewDropProposal(dropOperation: .copy, intent: .insertAtDestinationIndexPath)
+        let proposal = UICollectionViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
         return proposal
     }
     
